@@ -14,7 +14,7 @@ class App extends Component {
     };
 
     getCelcius = (tempInKelvins) => {
-        return tempInKelvins - 273.15
+        return Math.round(tempInKelvins - 273.15)
     };
 
 
@@ -24,15 +24,26 @@ class App extends Component {
         const country = e.target.elements.country.value;
         const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`);
         const data = await api_call.json();
-        this.setState({
-            temperature: data.main.temp,
-            city: data.name,
-            country: data.sys.country,
-            humidity: data.main.humidity,
-            description: data.weather[0].description,
-            error: ""
-        });
-        console.log(data);
+        if (city && country) {
+            console.log(data);
+            this.setState({
+                temperature: `${this.getCelcius(data.main.temp)}°C`,
+                city: data.name,
+                country: data.sys.country,
+                humidity: data.main.humidity,
+                description: data.weather[0].description,
+                error: ""
+            });
+        } else {
+            this.setState({
+                temperature: undefined,
+                city: undefined,
+                country: undefined,
+                humidity: undefined,
+                description: undefined,
+                error: "Please enter city and country"
+            });
+        }
     };
 
     render() {
