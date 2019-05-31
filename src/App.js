@@ -27,7 +27,6 @@ class App extends Component {
         const country = e.target.elements.country.value;
         try {
             const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`);
-            console.log(api_call)
             if (!api_call.ok) {
                 this.setState({
                     temperature: '',
