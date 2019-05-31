@@ -29,7 +29,6 @@ class App extends Component {
         const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`);
         const data = await api_call.json();
         if (city && country) {
-            console.log(data);
             this.setState({
                 temperature: `${this.getCelcius(data.main.temp)}°C`,
                 city: data.name,
@@ -39,7 +38,6 @@ class App extends Component {
                 icon: data.weather[0].icon,
                 error: ""
             });
-            console.log(this.state.icon)
         } else {
             this.setState({
                 temperature: undefined,
