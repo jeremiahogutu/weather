@@ -4,10 +4,10 @@ const WeatherContainer = (props) => {
     return (
         <div className='weatherContainer flex-center'>
             {/*cloudy svg diagram*/}
-            <div className='weatherIcon'
+            <div className="weatherIcon"
                  style={{display: props.icon === '04d' || props.icon === '04n' || props.icon === '03d' || props.icon === '03n' ? 'flex' : 'none'}}>
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                     viewBox="0 0 60.7 40"
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                     x="0px" y="0px" viewBox="0 0 60.7 40"
                      style={{enableBackground: 'new 0 0 60.7 40'}} xml="preserve">
                     <g id="Cloud_1">
                         <g id="White_cloud_1">
@@ -121,13 +121,14 @@ const WeatherContainer = (props) => {
                 </svg>
             </div>
             {/*clear night svg diagram*/}
-            <div className="weatherIcon"  style={{display: props.icon === '01n' ? 'flex' : 'none', paddingBottom: '25px'}}>
+            <div className="weatherIcon"
+                 style={{display: props.icon === '01n' ? 'flex' : 'none', paddingBottom: '25px'}}>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                      x="0px" y="0px" viewBox="0 0 30.8 42.5"
                      style={{enableBackground: 'new 0 0 60.7 40'}} xml="preserve" height="150px" width="150px">
-            <path id="Moon" className="yellow"
-                  d="M15.3,21.4C15,12.1,21.1,4.2,29.7,1.7c-2.8-1.2-5.8-1.8-9.1-1.7C8.9,0.4-0.3,10.1,0,21.9 c0.3,11.7,10.1,20.9,21.9,20.6c3.2-0.1,6.3-0.9,8.9-2.3C22.2,38.3,15.6,30.7,15.3,21.4z"/>
-          </svg>
+                    <path id="Moon" className="yellow"
+                          d="M15.3,21.4C15,12.1,21.1,4.2,29.7,1.7c-2.8-1.2-5.8-1.8-9.1-1.7C8.9,0.4-0.3,10.1,0,21.9 c0.3,11.7,10.1,20.9,21.9,20.6c3.2-0.1,6.3-0.9,8.9-2.3C22.2,38.3,15.6,30.7,15.3,21.4z"/>
+                </svg>
             </div>
             {/*cloudy with sun svg diagram*/}
             <div className='weatherIcon' style={{display: props.icon === '02d' ? 'flex' : 'none'}}>
@@ -315,42 +316,46 @@ const WeatherContainer = (props) => {
                 </svg>
             </div>
             {/*Sunny with wind svg diagram*/}
-            <div className='weatherIcon' style={{display: props.icon === '50d' || props.icon === '50n' ? 'flex' : 'none', paddingBottom: '25px'}}>
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 45.1 47.6"
+            <div className='weatherIcon' style={{
+                display: props.icon === '50d' || props.icon === '50n' ? 'flex' : 'none',
+                paddingBottom: '25px'
+            }}>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                     viewBox="0 0 45.1 47.6"
                      style={{enableBackground: 'new 0 0 60.7 40'}} xml="preserve" height="150px" width="150px">
                     <g id="Wind_Sun">
-    	        <g id="Sun_1_">
-            		<circle id="XMLID_25_" className="yellow" cx="27.1" cy="18.1" r="8.9"/>
-                    <g>
-            		    <path id="XMLID_21_" className="yellow"
-                              d="M27.2,6.5L27.2,6.5c-0.4,0-0.6-0.3-0.6-0.6V0.6c0-0.3,0.3-0.6,0.6-0.6l0.1,0 c0.3,0,0.6,0.3,0.6,0.6v5.4C27.7,6.2,27.5,6.5,27.2,6.5z"/>
-                        <path id="XMLID_18_" className="yellow"
-                              d="M27.2,29.5L27.2,29.5c-0.4,0-0.6,0.3-0.6,0.6v5.4c0,0.3,0.3,0.6,0.6,0.6h0.1 c0.3,0,0.6-0.3,0.6-0.6v-5.4C27.7,29.8,27.5,29.5,27.2,29.5z"/>
-                        <path id="XMLID_17_" className="yellow"
-                              d="M15.6,18L15.6,18c0,0.4-0.3,0.6-0.6,0.6H9.7c-0.3,0-0.6-0.3-0.6-0.6V18c0-0.3,0.3-0.6,0.6-0.6 h5.4C15.4,17.4,15.6,17.7,15.6,18z"/>
-                        <path id="XMLID_16_" className="yellow"
-                              d="M38.7,18L38.7,18c0,0.4,0.3,0.6,0.6,0.6h5.4c0.3,0,0.6-0.3,0.6-0.6V18c0-0.3-0.3-0.6-0.6-0.6 h-5.4C38.9,17.4,38.7,17.7,38.7,18z"/>
-                        <path id="XMLID_15_" className="yellow"
-                              d="M18.4,25.5L18.4,25.5c0.2,0.3,0.2,0.6,0,0.8l-4.1,3.5c-0.2,0.2-0.6,0.2-0.8-0.1l0,0 c-0.2-0.2-0.2-0.6,0.1-0.8l4.1-3.5C17.8,25.2,18.2,25.2,18.4,25.5z"/>
-                        <path id="XMLID_12_" className="yellow"
-                              d="M35.9,10.5L35.9,10.5c0.2,0.3,0.6,0.3,0.8,0.1l4.1-3.5C41,6.9,41,6.5,40.8,6.3l0,0 C40.6,6,40.2,6,40,6.2l-4.1,3.5C35.7,9.9,35.7,10.2,35.9,10.5z"/>
-                        <path id="XMLID_11_" className="yellow"
-                              d="M18.4,10.5L18.4,10.5c0.2-0.3,0.2-0.6,0-0.8l-4.1-3.5C14.1,6,13.7,6,13.5,6.3l0,0 c-0.2,0.2-0.2,0.6,0.1,0.8l4.1,3.5C17.8,10.8,18.2,10.8,18.4,10.5z"/>
-                        <path id="XMLID_9_" className="yellow"
-                              d="M35.9,25.5L35.9,25.5c0.2-0.3,0.6-0.3,0.8-0.1l4.1,3.5c0.2,0.2,0.3,0.6,0.1,0.8l0,0 C40.6,30,40.2,30,40,29.8l-4.1-3.5C35.7,26.1,35.7,25.8,35.9,25.5z"/>
-                        <animate attributeType="CSS"
-                                 attributeName="opacity"
-                                 // attributeType="XML"
-                                 dur="0.5s"
-                                 keyTimes="0;0.5;1"
-                                 repeatCount="indefinite"
-                                 values="1;0.6;1"
-                                 calcMode="linear"/>
-                </g>
-    	        </g>
+                        <g id="Sun_1_">
+                            <circle id="XMLID_25_" className="yellow" cx="27.1" cy="18.1" r="8.9"/>
+                            <g>
+                                <path id="XMLID_21_" className="yellow"
+                                      d="M27.2,6.5L27.2,6.5c-0.4,0-0.6-0.3-0.6-0.6V0.6c0-0.3,0.3-0.6,0.6-0.6l0.1,0 c0.3,0,0.6,0.3,0.6,0.6v5.4C27.7,6.2,27.5,6.5,27.2,6.5z"/>
+                                <path id="XMLID_18_" className="yellow"
+                                      d="M27.2,29.5L27.2,29.5c-0.4,0-0.6,0.3-0.6,0.6v5.4c0,0.3,0.3,0.6,0.6,0.6h0.1 c0.3,0,0.6-0.3,0.6-0.6v-5.4C27.7,29.8,27.5,29.5,27.2,29.5z"/>
+                                <path id="XMLID_17_" className="yellow"
+                                      d="M15.6,18L15.6,18c0,0.4-0.3,0.6-0.6,0.6H9.7c-0.3,0-0.6-0.3-0.6-0.6V18c0-0.3,0.3-0.6,0.6-0.6 h5.4C15.4,17.4,15.6,17.7,15.6,18z"/>
+                                <path id="XMLID_16_" className="yellow"
+                                      d="M38.7,18L38.7,18c0,0.4,0.3,0.6,0.6,0.6h5.4c0.3,0,0.6-0.3,0.6-0.6V18c0-0.3-0.3-0.6-0.6-0.6 h-5.4C38.9,17.4,38.7,17.7,38.7,18z"/>
+                                <path id="XMLID_15_" className="yellow"
+                                      d="M18.4,25.5L18.4,25.5c0.2,0.3,0.2,0.6,0,0.8l-4.1,3.5c-0.2,0.2-0.6,0.2-0.8-0.1l0,0 c-0.2-0.2-0.2-0.6,0.1-0.8l4.1-3.5C17.8,25.2,18.2,25.2,18.4,25.5z"/>
+                                <path id="XMLID_12_" className="yellow"
+                                      d="M35.9,10.5L35.9,10.5c0.2,0.3,0.6,0.3,0.8,0.1l4.1-3.5C41,6.9,41,6.5,40.8,6.3l0,0 C40.6,6,40.2,6,40,6.2l-4.1,3.5C35.7,9.9,35.7,10.2,35.9,10.5z"/>
+                                <path id="XMLID_11_" className="yellow"
+                                      d="M18.4,10.5L18.4,10.5c0.2-0.3,0.2-0.6,0-0.8l-4.1-3.5C14.1,6,13.7,6,13.5,6.3l0,0 c-0.2,0.2-0.2,0.6,0.1,0.8l4.1,3.5C17.8,10.8,18.2,10.8,18.4,10.5z"/>
+                                <path id="XMLID_9_" className="yellow"
+                                      d="M35.9,25.5L35.9,25.5c0.2-0.3,0.6-0.3,0.8-0.1l4.1,3.5c0.2,0.2,0.3,0.6,0.1,0.8l0,0 C40.6,30,40.2,30,40,29.8l-4.1-3.5C35.7,26.1,35.7,25.8,35.9,25.5z"/>
+                                <animate attributeType="CSS"
+                                         attributeName="opacity"
+                                    // attributeType="XML"
+                                         dur="0.5s"
+                                         keyTimes="0;0.5;1"
+                                         repeatCount="indefinite"
+                                         values="1;0.6;1"
+                                         calcMode="linear"/>
+                            </g>
+                        </g>
                         <g id="Wind">
-            		<path id="XMLID_27_" className="st1"
-                          d="M1.3,33.1h19.3c2.1,0,3.8-1.3,3.8-3v0v0c0-1.7-1.7-3-3.8-3h-2.1"/>
+                            <path id="XMLID_27_" className="st1"
+                                  d="M1.3,33.1h19.3c2.1,0,3.8-1.3,3.8-3v0v0c0-1.7-1.7-3-3.8-3h-2.1"/>
                             <path id="XMLID_40_" className="st1"
                                   d="M2.4,42.4h18.2c2,0,3.6,0.9,3.6,2.1l0,0v0c0,1.2-1.6,2.1-3.6,2.1h-2"/>
                             <line id="XMLID_28_" className="st1" x1="5.3" y1="36.3" x2="25.5" y2="36.3"/>
@@ -363,66 +368,67 @@ const WeatherContainer = (props) => {
                                               type="translate"
                                               values="0;3"
                                               calcMode="linear">
-                </animateTransform>
+                            </animateTransform>
                             <animate attributeType="CSS"
                                      attributeName="opacity"
-                                     // attributeType="XML"
+                                // attributeType="XML"
                                      dur="1.5s"
                                      keyTimes="0;1"
                                      repeatCount="indefinite"
                                      values="0.3;0.9"
                                      calcMode="linear"/>
-            	</g>
-            </g>
-          </svg>
+                        </g>
+                    </g>
+                </svg>
             </div>
             {/*Snowy svg diagram */}
-            <div className="weatherIcon" style={{display: props.icon === '13d' || props.icon === '13n' ? 'flex' : 'none'}}>
+            <div className="weatherIcon"
+                 style={{display: props.icon === '13d' || props.icon === '13n' ? 'flex' : 'none'}}>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                      x="0px" y="0px" viewBox="0 0 55.1 52.5"
+                     x="0px" y="0px" viewBox="0 0 55.1 52.5"
                      style={{enableBackground: 'new 0 0 60.7 40'}} xml="preserve">
-            <g id="Cloud_7">
-  	          <g id="White_cloud_7">
-  		          <path id="XMLID_8_" className="white"
-                        d="M47.2,34.5H7.9c-4.3,0-7.9-3.5-7.9-7.9l0,0c0-4.3,3.5-7.9,7.9-7.9h39.4c4.3,0,7.9,3.5,7.9,7.9 v0C55.1,30.9,51.6,34.5,47.2,34.5z"/>
-                  <circle id="XMLID_5_" className="white" cx="17.4" cy="17.3" r="9.3"/>
-                  <circle id="XMLID_1_" className="white" cx="34.5" cy="15.6" r="15.6"/>
-  	          </g>
-                <circle className="white" cx="37" cy="43.5" r="3">
-                <animateTransform attributeName="transform"
-                                  attributeType="XML"
-                                  dur="1.5s"
-                                  keyTimes="0;0.33;0.66;1"
-                                  repeatCount="indefinite"
-                                  type="translate"
-                                  values="1 -2;3 2; 1 4; 2 6"
-                                  calcMode="linear">
-                </animateTransform>
-              </circle>
-                <circle className="white" cx="27" cy="43.5" r="3">
-                <animateTransform attributeName="transform"
-                                  attributeType="XML"
-                                  dur="1.5s"
-                                  keyTimes="0;0.33;0.66;1"
-                                  repeatCount="indefinite"
-                                  type="translate"
-                                  values="1 -2;3 2; 1 4; 2 6"
-                                  calcMode="linear">
-                </animateTransform>
-              </circle>
-                <circle className="white" cx="17" cy="43.5" r="3">
-                <animateTransform attributeName="transform"
-                                  attributeType="XML"
-                                  dur="1.5s"
-                                  keyTimes="0;0.33;0.66;1"
-                                  repeatCount="indefinite"
-                                  type="translate"
-                                  values="1 -2;3 2; 1 4; 2 6"
-                                  calcMode="linear">
-                </animateTransform>
-              </circle>
-            </g>
-          </svg>
+                    <g id="Cloud_7">
+                        <g id="White_cloud_7">
+                            <path id="XMLID_8_" className="white"
+                                  d="M47.2,34.5H7.9c-4.3,0-7.9-3.5-7.9-7.9l0,0c0-4.3,3.5-7.9,7.9-7.9h39.4c4.3,0,7.9,3.5,7.9,7.9 v0C55.1,30.9,51.6,34.5,47.2,34.5z"/>
+                            <circle id="XMLID_5_" className="white" cx="17.4" cy="17.3" r="9.3"/>
+                            <circle id="XMLID_1_" className="white" cx="34.5" cy="15.6" r="15.6"/>
+                        </g>
+                        <circle className="white" cx="37" cy="43.5" r="3">
+                            <animateTransform attributeName="transform"
+                                              attributeType="XML"
+                                              dur="1.5s"
+                                              keyTimes="0;0.33;0.66;1"
+                                              repeatCount="indefinite"
+                                              type="translate"
+                                              values="1 -2;3 2; 1 4; 2 6"
+                                              calcMode="linear">
+                            </animateTransform>
+                        </circle>
+                        <circle className="white" cx="27" cy="43.5" r="3">
+                            <animateTransform attributeName="transform"
+                                              attributeType="XML"
+                                              dur="1.5s"
+                                              keyTimes="0;0.33;0.66;1"
+                                              repeatCount="indefinite"
+                                              type="translate"
+                                              values="1 -2;3 2; 1 4; 2 6"
+                                              calcMode="linear">
+                            </animateTransform>
+                        </circle>
+                        <circle className="white" cx="17" cy="43.5" r="3">
+                            <animateTransform attributeName="transform"
+                                              attributeType="XML"
+                                              dur="1.5s"
+                                              keyTimes="0;0.33;0.66;1"
+                                              repeatCount="indefinite"
+                                              type="translate"
+                                              values="1 -2;3 2; 1 4; 2 6"
+                                              calcMode="linear">
+                            </animateTransform>
+                        </circle>
+                    </g>
+                </svg>
             </div>
         </div>
     );
