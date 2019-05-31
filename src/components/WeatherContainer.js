@@ -315,7 +315,7 @@ const WeatherContainer = (props) => {
                 </svg>
             </div>
             {/*Sunny with wind svg diagram*/}
-            <div className='weatherIcon' style={{display: props.icon === '50d' || props.icon === '50n' ? 'flex' : 'none'}}>
+            <div className='weatherIcon' style={{display: props.icon === '50d' || props.icon === '50n' ? 'flex' : 'none', paddingBottom: '25px'}}>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 45.1 47.6"
                      style={{enableBackground: 'new 0 0 60.7 40'}} xml="preserve" height="150px" width="150px">
                     <g id="Wind_Sun">
