@@ -85,7 +85,7 @@ const WeatherContainer = (props) => {
             </div>
             {/*sunny svg diagram*/}
             <div className='weatherIcon'
-                 style={{display: props.icon === '01d' ? 'flex' : 'none'}}>
+                 style={{display: props.icon === '01d' ? 'flex' : 'none', paddingBottom: '25px'}}>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                      viewBox="0 0 44.9 44.9" style={{enableBackground: 'new 0 0 60.7 40'}}
                      xml="preserve" height="150px" width="150px">
@@ -121,7 +121,7 @@ const WeatherContainer = (props) => {
                 </svg>
             </div>
             {/*clear night svg diagram*/}
-            <div className="weatherIcon"  style={{display: props.icon === '01n' ? 'flex' : 'none'}}>
+            <div className="weatherIcon"  style={{display: props.icon === '01n' ? 'flex' : 'none', paddingBottom: '25px'}}>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                      x="0px" y="0px" viewBox="0 0 30.8 42.5"
                      style={{enableBackground: 'new 0 0 60.7 40'}} xml="preserve" height="40px" width="40px">
