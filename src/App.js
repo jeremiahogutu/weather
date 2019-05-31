@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import Form from "./components/Form";
 import Weather from "./components/weather";
+import {Grid} from "@material-ui/core";
+import './App.css'
+import WeatherContainer from "./components/WeatherContainer";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -10,6 +13,7 @@ class App extends Component {
         city: undefined,
         humidity: undefined,
         description: undefined,
+        icon: undefined,
         error: undefined
     };
 
@@ -32,8 +36,10 @@ class App extends Component {
                 country: data.sys.country,
                 humidity: data.main.humidity,
                 description: data.weather[0].description,
+                icon: data.weather[0].icon,
                 error: ""
             });
+            console.log(this.state.icon)
         } else {
             this.setState({
                 temperature: undefined,
@@ -41,24 +47,32 @@ class App extends Component {
                 country: undefined,
                 humidity: undefined,
                 description: undefined,
+                icon: undefined,
                 error: "Please enter city and country"
             });
         }
     };
 
     render() {
-        const {temperature, city, country, humidity, description, error } = this.state;
+        const {temperature, city, country, humidity, description, error, icon} = this.state;
         return (
-            <div>
-                <Form getWeather={this.getWeather}/>
-                <Weather
-                    temperature={temperature}
-                    city={city}
-                    country={country}
-                    humidity={humidity}
-                    description={description}
-                    error={error}
-                />
+            <div style={{display: 'flex', justifyContent: 'center', height: '100vh'}}>
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', maxWidth: '1100px'}}>
+                    <Grid container style={{background: '#212121'}}>
+                        <Grid item xs={12}>
+                            <WeatherContainer icon={icon}/>
+                            <Form getWeather={this.getWeather}/>
+                            <Weather
+                                temperature={temperature}
+                                city={city}
+                                country={country}
+                                humidity={humidity}
+                                description={description}
+                                error={error}
+                            />
+                        </Grid>
+                    </Grid>
+                </div>
             </div>
         );
     }
