@@ -5,10 +5,9 @@ const WeatherContainer = (props) => {
         <div className='weatherContainer flex-center'>
             {/*cloudy svg diagram*/}
             <div className="weatherIcon"
-                 style={{display: props.icon === '04d' || props.icon === '04n' || props.icon === '03d' || props.icon === '03n' ? 'flex' : 'none'}}>
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                     x="0px" y="0px" viewBox="0 0 60.7 40"
-                     style={{enableBackground: 'new 0 0 60.7 40'}} xml="preserve">
+                 style={{display: props.icon === '04d' || props.icon === '04n' || props.icon === '03d' || props.icon === '03n' ? 'block' : 'none'}}>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 60.7 40"
+                     style={{enableBackground: 'new 0 0 60.7 40'}} xml="preserve" height="150px" width="150px">
                     <g id="Cloud_1">
                         <g id="White_cloud_1">
                             <path id="XMLID_2_" className="white"
@@ -44,10 +43,10 @@ const WeatherContainer = (props) => {
             </div>
             {/*rainy svg diagram*/}
             <div className='weatherIcon'
-                 style={{display: props.icon === '10d' || props.icon === '10n' || props.icon === '09d' || props.icon === '09n' ? 'flex' : 'none'}}>
+                 style={{display: props.icon === '10d' || props.icon === '10n' || props.icon === '09d' || props.icon === '09n' ? 'block' : 'none'}}>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                      viewBox="0 0 55.1 60" style={{enableBackground: 'new 0 0 60.7 40'}}
-                     xml="preserve">
+                     xml="preserve" height="150px" width="150px">
                     <g id="Cloud_2">
                         <g id="Rain_2">
                             <path id="rain_2_left" className="white"
@@ -85,7 +84,7 @@ const WeatherContainer = (props) => {
             </div>
             {/*sunny svg diagram*/}
             <div className='weatherIcon'
-                 style={{display: props.icon === '01d' ? 'flex' : 'none', paddingBottom: '25px'}}>
+                 style={{display: props.icon === '01d' ? 'block' : 'none', paddingBottom: '25px'}}>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                      viewBox="0 0 44.9 44.9" style={{enableBackground: 'new 0 0 60.7 40'}}
                      xml="preserve" height="150px" width="150px">
@@ -122,7 +121,7 @@ const WeatherContainer = (props) => {
             </div>
             {/*clear night svg diagram*/}
             <div className="weatherIcon"
-                 style={{display: props.icon === '01n' ? 'flex' : 'none', paddingBottom: '25px'}}>
+                 style={{display: props.icon === '01n' ? 'block' : 'none', paddingBottom: '25px'}}>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                      x="0px" y="0px" viewBox="0 0 30.8 42.5"
                      style={{enableBackground: 'new 0 0 60.7 40'}} xml="preserve" height="150px" width="150px">
@@ -131,10 +130,10 @@ const WeatherContainer = (props) => {
                 </svg>
             </div>
             {/*cloudy with sun svg diagram*/}
-            <div className='weatherIcon' style={{display: props.icon === '02d' ? 'flex' : 'none'}}>
+            <div className='weatherIcon' style={{display: props.icon === '02d' ? 'block' : 'none'}}>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                      x="0px" y="0px" viewBox="0 0 61.7 42.8" style={{enableBackground: 'new 0 0 60.7 40'}}
-                     xml="preserve">
+                     xml="preserve" height="150px" width="150px">
                     <g id="Cloud_3">
                         <g id="White_cloud_3">
                             <path id="XMLID_24_" className="white"
@@ -207,10 +206,10 @@ const WeatherContainer = (props) => {
                 </svg>
             </div>
             {/*cloudy with moon svg diagram*/}
-            <div className='weatherIcon' style={{display: props.icon === '02n' ? 'flex' : 'none'}}>
+            <div className='weatherIcon' style={{display: props.icon === '02n' ? 'block' : 'none'}}>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                      x="0px" y="0px" viewBox="0 0 60.7 44.4"
-                     style={{enableBackground: 'new 0 0 60.7 40'}} xml="preserve">
+                     style={{enableBackground: 'new 0 0 60.7 40'}} xml="preserve" height="150px" width="150px">
                     <g id="Cloud_5">
                         <g id="White_cloud_5">
                             <path id="XMLID_49_" className="white"
@@ -248,10 +247,10 @@ const WeatherContainer = (props) => {
             </div>
             {/*Cloudy with rain and lightning svg diagram*/}
             <div className='weatherIcon'
-                 style={{display: props.icon === '11d' || props.icon === '11n' ? 'flex' : 'none'}}>
+                 style={{display: props.icon === '11d' || props.icon === '11n' ? 'block' : 'none'}}>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                      x="0px" y="0px" viewBox="0 0 60.7 80"
-                     style={{enableBackground: 'new 0 0 60.7 40'}} xml="preserve">
+                     style={{enableBackground: 'new 0 0 60.7 40'}} xml="preserve" height="150px" width="150px">
                     <g id="Cloud_6">
                         <g id="White_cloud_6">
                             <path id="XMLID_81_" className="white"
@@ -317,7 +316,7 @@ const WeatherContainer = (props) => {
             </div>
             {/*Sunny with wind svg diagram*/}
             <div className='weatherIcon' style={{
-                display: props.icon === '50d' || props.icon === '50n' ? 'flex' : 'none',
+                display: props.icon === '50d' || props.icon === '50n' ? 'block' : 'none',
                 paddingBottom: '25px'
             }}>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -383,10 +382,10 @@ const WeatherContainer = (props) => {
             </div>
             {/*Snowy svg diagram */}
             <div className="weatherIcon"
-                 style={{display: props.icon === '13d' || props.icon === '13n' ? 'flex' : 'none'}}>
+                 style={{display: props.icon === '13d' || props.icon === '13n' ? 'block' : 'none'}}>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                      x="0px" y="0px" viewBox="0 0 55.1 52.5"
-                     style={{enableBackground: 'new 0 0 60.7 40'}} xml="preserve">
+                     style={{enableBackground: 'new 0 0 60.7 40'}} xml="preserve" height="150px" width="150px">
                     <g id="Cloud_7">
                         <g id="White_cloud_7">
                             <path id="XMLID_8_" className="white"
