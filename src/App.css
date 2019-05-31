@@ -1,0 +1,68 @@
+body {
+  background: #212121;
+  /*background: #353535;*/
+}
+
+.weatherContainer {
+  background: #212121;
+  padding-bottom: 10px;
+}
+.weatherIcon {
+  height: 150px;
+  width: 150px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #57c1eb 0%,#246fa8 100%);
+}
+
+.elements {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.MuiInputLabel-formControl {
+  color: #fff;
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: #fff !important;
+}
+
+.MuiInput-underline::after {
+  border-bottom: 1px solid #fff !important;
+}
+
+.MuiInput-underline::before {
+  border-bottom: 1px solid #fff !important;
+}
+
+.MuiFormControl-marginNormal {
+  margin-top: 0 !important;
+}
+
+.metricLabel {
+  color: cyan;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.st1{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+
+.white {fill:#FFFFFF}
+.gray {fill:#E0E0E0}
+.yellow {fill:#FFEB3B}
